@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instal dependensi aplikasi
-RUN npm install
+RUN pnpm install
 
 # Salin semua file sumber aplikasi ke dalam container
 COPY . .
@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -y \
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 # Ekspos port yang digunakan oleh aplikasi
-EXPOSE 3000
+EXPOSE 8080
 
 # Jalankan aplikasi
-CMD ["npm", "start"]
+CMD ["pnpm", "start"]
