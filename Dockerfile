@@ -25,8 +25,5 @@ RUN npm install
 # Copy seluruh kode aplikasi
 COPY . .
 
-# Set Puppeteer untuk menggunakan Chromium bawaan sistem
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
-
 # Jalankan aplikasi
 CMD ["node", "main.js"]
