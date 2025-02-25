@@ -63,14 +63,9 @@ client.on("message_create", async (message) => {
             headers: { Authorization: `Bearer ${process.env.API_TOKEN}` },
           }
         );
-
-        if (
-          response.data &&
-          response.data.choices &&
-          response.data.choices[0] &&
-          response.data.choices[0].message.content !== ""
-        ) {
-          message.reply(response.data.choices[0].message.content);
+        const aiResponse = response.data?.choices?.[0]?.message?.content ?? "";
+        if (aiResponse) {
+          message.reply(aiResponse);
         } else {
           message.reply("Maaf, tidak dapat memperoleh jawaban.");
         }
