@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instal dependensi aplikasi
-RUN pnpm install
+RUN npm install
 
 # Salin semua file sumber aplikasi ke dalam container
 COPY . .
@@ -44,4 +44,4 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 EXPOSE 8080
 
 # Jalankan aplikasi
-CMD ["pnpm", "start"]
+CMD ["npm", "start"]

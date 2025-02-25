@@ -16,6 +16,5 @@
     "puppeteer": "^18.2.1",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.26.0"
-  },
-  "packageManager": "pnpm@10.4.1"
+  }
 }
